@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	
+<head>
+
+<style type="text/css">
+    
+
+.bottombox
+{
+     margin-top: 0px;
+     margin-left: 370px;
+     width: 70%;
+     height: 150px;
+     padding: 30px;
+}    
+
+.navf
+{
+     background-image: url("/xampp/htdocs/filter/img/LemonCake.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+body
+{
+     background-image: url("/xampp/htdocs/filter/img/bakery1.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.bar
+{
+     width: 100%;
+     height: 30px;
+     background-color: chocolate;
+     display:none
+}
+
+#bt1,#bt2
+{
+     margin-right: 60px;
+}
+
+#bd1,#bd2,#bd3
+{
+opacity:0.2;
+}
+
+#price1,#price2,#price3,#price4
+{
+     margin-left: 60px;
+}
+
+
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+     <nav class="navbar navbar-dark navf">
+         
+          <p class="tp text-center" style="color: blanchedalmond;" id="next">WELCOME TO ROSE BAKERY</p>
+          
+          <div class="nav nav-navbar">
+               <a><button class="btn btn-info nav-item" type="submit" id="bt1" onclick="pricelist()">Select price range</button></a>
+          <a><input type="text" class="form-control nav-item" id="srch" type="text" placeholder="Search items..."></a>
+     <a><button class="btn btn-success nav-item" type="submit" id="bt2" onclick="filternow()">Search</button></a>
+     <a><button class="btn btn-warning nav-item" type="submit" id="bt3" onclick="clearsearch()">clear filters</button></a>
+               
+          </div>     
+                      
+           
+     </nav>
+
+     <div class="bar" id="bar">
+          <input type="radio"  id="price1" name="v" onclick="filternow()">less than 5$
+          <input type="radio"  id="price2" name="v" onclick="filternow()">5$-10$
+          <input type="radio"  id="price3" name="v" onclick="filternow()">10$-20$
+          <input type="radio"  id="price4" name="v" onclick="filternow()">more than 20$
+     </div>
+     
+
+     <audio loop id="aud">
+        
+        <source src="/xampp/htdocs/hangman/im/sound1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+      <div class="card-group"  id="bdy1">
+       
+        </div>
+        <div class="card-group"  id="bdy2">
+          
+        </div>
+        <div class="card-group"  id="bdy3">
+          
+        </div>
+      </div>
+    </div>
+    
+<script type="text/javascript" src="js/filter.js" onload="displayall()"></script>	
+
+
+</body>
+</html>
